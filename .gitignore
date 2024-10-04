@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# scratch files
+sample*
+
 # Distribution / packaging
 .Python
 build/
