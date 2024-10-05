@@ -206,14 +206,14 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
   -n ingress-nginx --create-namespace
 ```
 
-Modify the following lines of of each manifest to correctly deploy your application.
+Modify the following lines of the `flask-deployment.yaml` manifest to correctly deploy your application. Add the repo/name:version of the image you created to correction pull the image from the repo for deployment.
 
 `cd /path/to/localcode`
+`nano k8s/flask-deployment.yaml`
 
 ```bash
-/k8s/flask-deployment.yaml
-      # add the correct image 
-ln17: image: <repo-name>/<image-name>:<image-version>
+      # add the correct image on line 17
+ln18: image: <repo-name>/<image-name>:<image-version>
 
 ```
 
@@ -234,4 +234,4 @@ echo $INGRESS_IP
 
 Copy / Paste the IP from your terminal and check to see if it's working via your web browser!
 
-**🏁🏁🏁🏁🏁🏁🏁**
+# 🏁🏁🏁🏁🏁🏁🏁
