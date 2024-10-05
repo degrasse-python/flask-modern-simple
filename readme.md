@@ -232,6 +232,6 @@ echo $INGRESS_IP
 
 ```
 
-Copy / Paste the IP from your terminal and check to see if it's working via your web browser!
+**Copy** the `$INGRESS_IP` from your terminal and **Paste**  into your web browser to confirm it's working.!
 
 # 🏁🏁🏁🏁🏁🏁🏁
