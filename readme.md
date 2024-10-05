@@ -165,7 +165,7 @@ gcloud container clusters create CLUSTER_NAME \
   --release-channel "regular" \
   --cluster-ipv4-cidr "/17"
 
-## example
+## example -- this should take about 5-7 mins to finish setup.
 gcloud container clusters create example-cluster \
   --zone us-central1-a \
   --release-channel "regular" \
@@ -217,6 +217,7 @@ ln18: image: <repo-name>/<image-name>:<image-version>
 
 ```
 
+Finally use kubectl against your kubernetes cluster to setup your flask application.
 ```bash
 # deploy the application
 kubectl apply -f k8s/flask-deploy.yaml
