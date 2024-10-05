@@ -1,6 +1,6 @@
 # How to build and run a flask-api application as a container on local and within a kubernetes container orchestrator
 
-This repo is an overview of how to deploy an image to two different container base environments. The first environment is a local docker container.
+This repo is an overview of how to deploy an image to two different container based environments. The first environment is a local docker base environment inside a single container.
 The 2nd is a modern cloud example where you will use a MacOS client to deploy to GKE. There is more work than the local dev environment example but still fun stuff.
 
 If you are on a linux based distro as a client you need research each step to prepare your environment. There are plenty of docs that can help you with the environment setup. After you auth to the k8s environment then the steps will be the same across any client environment.
