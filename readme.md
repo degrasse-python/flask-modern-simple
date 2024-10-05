@@ -68,7 +68,7 @@ docker run -it --rm --name flask -p 5555:5555 <repo-name>/<image-name>:<image-ve
 
 ## Public Cloud Build & Deploy
 
-The steps below are how to prep your environment and run a container in your local development environment.
+The steps below are how to prep your local client and deploy a container on the Google Kubernetes Enginge container orchestrator.
 
 ### Prereq's
 
