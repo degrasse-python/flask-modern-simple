@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: py-app
+  name: app
+  namespace: apis
 spec:
   replicas: 1
   selector:
@@ -14,8 +15,8 @@ spec:
     spec:
       containers:
       - name: app
-        image: <repo-name>/<image-name>:<image-version>
-        imagePullPolicy: Never
+        image: 5thcinema/go-backend-services:kubiya
+        imagePullPolicy: Always
         ports:
         - containerPort:  5555
 

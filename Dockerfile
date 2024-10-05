@@ -8,10 +8,10 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip3 install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY ./app/app.py /app/
 
 # Expose port 5000 for the Flask application
 EXPOSE 5555
 
 # Define the command to run the Flask application using Gunicorn
-CMD ["gunicorn", "application:app", "-b", "0.0.0.0:5000", "-w", "4"]
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:5555", "-w", "2"]
