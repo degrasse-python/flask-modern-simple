@@ -1,7 +1,7 @@
 # How to build and run a flask-api application as a container on local and within a kubernetes container orchestrator
 
-This repo is an overview of how to deploy docker to two different envs. 
-In the modern cloud example you will use a MacOS client to deploy to GKE. There is more work than the local dev environment example but still fun stuff.
+This repo is an overview of how an image to two different container base environments. The first environment is a local docker container.
+The 2nd is a modern cloud example where you will use a MacOS client to deploy to GKE. There is more work than the local dev environment example but still fun stuff.
 
 If you are on a linux based distro as a client you need research each step to prepare your environment. There are plenty of docs that can help you with the environment setup. After you auth to the k8s environment then the steps will be the same across any client environment.
 
@@ -18,7 +18,7 @@ Follow the steps below in sequence to clone, build, and deploy on your local Mac
 5. Build image
 6. Run container on local Docker
 
-**Install requirements:MacOS**
+### A. Install requirements:MacOS
 
 Install brew
 ```bash
@@ -41,7 +41,7 @@ If you have issues with permissions create an access token and use that to login
 docker login
 ```
 
-**Build and Deploy:MacOS**
+### B. Build and Deploy:MacOS
 
 First you will clone the codebase and build the image. 
 Then, change your directory to the working directory for the project. 
@@ -49,7 +49,7 @@ These commands will clone the codebase, build the image, and push the image for 
 
 ```bash
 # clone code
-git clone && cd 
+git clone https://github.com/degrasse-python/flask-modern-simple && cd flask-modern-simple/
 # start the docker application
 open -a docker
 # build image for use with containers 🤓
@@ -85,7 +85,7 @@ Follow the steps below in sequence build and deploy to GCP. The CLI commands may
 9. Use the k8s declaritive files for 
 
 
-**Install requirements:MacOS**
+### A. Install requirements:MacOS
 
 Install brew
 ```bash
@@ -131,7 +131,7 @@ gke-gcloud-auth-plugin --version
 
 
 
-**Build and Deploy:GKE** 😎
+### B. Build and Deploy:GKE 😎
 
 Clone the codebase and build the image. 
 Then, change your directory to the working directory for the project. 
@@ -139,7 +139,9 @@ These commands will clone the codebase, build the image, and push the image for 
 
 ```bash
 # clone code
-git clone && cd 
+git clone https://github.com/degrasse-python/flask-modern-simple && cd flask-modern-simple/
+# start the docker application
+open -a docker
 # build image for use with containers 🤓
 ## <repo-name> == the name of the repo that you created using your account.
 ## <image-name> == the name of your image built (e.g. flask-api).
