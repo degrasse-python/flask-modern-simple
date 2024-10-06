@@ -161,7 +161,7 @@ Here you will provision a k8s cluster using gcloud CLI and then auth to the clus
 gcloud components update
 # create cluster -- example below command --  use UI if you have issues
 gcloud container clusters create CLUSTER_NAME \
-  --zone COMPUTE_ZONE 
+  --zone COMPUTE_ZONE \
   --release-channel "regular" \
   --cluster-ipv4-cidr "/17"
 
